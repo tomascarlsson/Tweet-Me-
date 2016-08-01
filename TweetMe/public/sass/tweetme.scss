@@ -1,0 +1,132 @@
+/**
+ * TweetMe - Main Sass File
+ */
+
+/**
+ * ================
+ * VARIABLES
+ * ================
+ */
+$body-font: 'Open Sans', 'Helvetica', Arial, Verdana, sans-serif;
+$primary-color: #222222;
+$secondary-color: #FF7000;
+$tweet-white: #FFFFFF;
+$tweet-gray: #8FA0B8;
+
+/**
+ * ================
+ * GENERIC
+ * ================
+ */
+body{ 
+	font-family: $body-font; 
+    background-color: $tweet-gray;
+}
+#container{
+	background-color: $tweet-white; 
+	margin-right: auto;
+	margin-left: auto;
+	width: 960px;
+	#content{
+		padding:40px;
+	}
+}
+.row{
+	margin-bottom: 0;
+	width: 100%;
+	clear:left;
+}
+.row-content{
+	padding-bottom: 80px;
+	width: 100%;
+	clear:left;
+}
+.line{
+	border-bottom: 3px solid #000;
+	width: 100%;
+}
+.column-small{
+	width: auto;
+	float: left;
+	margin-right: 20px;
+}
+.column-medium{
+	width: 200px;
+	float: left;
+}
+.column-large{
+	width: 500px;
+	float: left;
+}
+.profilepicture{
+	width: 60px;
+}
+.date{
+	color: $secondary-color;
+	font: 0.8em "Open Sans", sans-serif;
+}
+.delete-tweet{
+	text-align:right;
+	float:none;
+}
+.username{
+	font-style: italic;
+	color: $tweet-gray;
+}
+
+/*
+* ================
+* HEADER
+* ================
+ */
+header{
+	padding: 0;
+}
+
+/**
+ * LOGOTYPE
+ */
+#logotype{
+	background: url('../images/logo_305x160_x1.png') no-repeat;
+    width: 305px;
+    height: 160px;
+    background-size: 305px 160px;
+    display: block;
+    margin-right: auto;
+	margin-left: auto;
+}
+/* Logo for retina displays */
+@media 
+(-webkit-min-device-pixel-ratio: 2), 
+(min-resolution: 192dpi) { 
+    /* Retina-specific stuff here */
+    #logotype{
+	background: url('../images/logo_610x320_x2.png') no-repeat;
+    width: 305px;
+    height: 160px;
+    background-size: 305px 160px;
+    margin-right: auto;
+	margin-left: auto;
+    }
+}
+#brandname{
+	padding-top: 0;
+	font: 2.9em "Open Sans", sans-serif;
+	color: $primary-color;
+	font-weight: bold;
+	text-align:center;
+}
+
+/*
+* =======================
+* GENERIC PAGE STYLES
+* =======================
+ */
+h1{
+	color: $primary-color;
+}
+p{
+	font: 0.9em "Open Sans", sans-serif;
+	margin:0;
+}
+

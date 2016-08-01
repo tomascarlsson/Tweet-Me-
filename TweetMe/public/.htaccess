@@ -1,0 +1,15 @@
+# Disable MultiViews. Makes it possible for the server to choose nice url-names instead of the actual filename
+Options -MultiViews
+
+# Turn rewrite engine on
+RewriteEngine On
+
+# Specifies the URL prefix to be used for per-directory RewriteRule directives that substitute a relative path.
+RewriteBase /Studier/Databaser/Uppgift-3-App/TweetMe/public
+
+# Rule conditions
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+
+# Takes the string in URL use it parseUrl function 
+RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]
